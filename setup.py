@@ -48,7 +48,7 @@ setup(
     'Science project': 'http://timeless.texure.rocks',
 	},
 	
-	install_requires=['xfab','numpy','scipy','fabio','matplotlib'],
+	install_requires=['xfab','numpy','scipy','fabio','matplotlib','PycifRW'],
 	
 	package_dir = {
 				'TIMEleSS': 'TIMEleSS',
@@ -67,6 +67,7 @@ setup(
 		'console_scripts': [
 			'timelessTest = TIMEleSS.simulation.test:test',
 			'timelessGrainComparison = TIMEleSS.simulation.grainComparison:run',
+			'timelessGrainPeaksComparison = TIMEleSS.simulation.grainPeaksComparison:run',
 			'timelessGrainSpotterMerge = TIMEleSS.simulation.grainSpotterMerge:run',
 			'timelessTiff2edf = TIMEleSS.diffraction.tiff2edf:run',
 			'timelessMccd2edf = TIMEleSS.diffraction.mccd2edf:run',
@@ -81,6 +82,11 @@ setup(
 			'timelessClearFLTGrains = TIMEleSS.simulation.clearFLTGrains:run',
 			'timelessSaveFLTGrains = TIMEleSS.simulation.fltForGrains:run',
 			'timelessExtractEulerAngles = TIMEleSS.evaluation.extractEulerAngles:run',
+			'timelessTestGSEulerAngles = TIMEleSS.evaluation.testGSEulerAngles:run',
+			'timelessTestGSvsGVE = TIMEleSS.evaluation.testGSvsGVE:run',
+			'timeless2thetaHistFromGVE = TIMEleSS.evaluation.twoThetaHistFromGVE:run',
+			'timelessGSIndexingStatistics = TIMEleSS.evaluation.GSIndexingStatistics:run',
+			'timelessPeaksFromCIF = TIMEleSS.simulation.printPeaksFromCIF:run',
         ],
 		'gui_scripts': [
 		    'timelessPlotIndexedGrain = TIMEleSS.evaluation.testGrainsPeaksGui:run',
